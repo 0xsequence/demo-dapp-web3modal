@@ -1,14 +1,14 @@
 Demo Dapp + Web3Modal
 =====================
 
-Dapp example on how to use Sequence Wallet with [Web3Modal](https://github.com/Web3Modal/web3modal). Covers how to connect, sign messages and send transctions.
+Dapp example on how to use Sequence Wallet with [Web3Modal](https://github.com/Web3Modal/web3modal). Demonstrates how to connect a wallet, sign messages and send transactions.
 
 ## Usage
 
 1. yarn
 2. yarn dev
 3. Open browser to http://localhost:4000 to access the demo dapp
-4. Open browser inspector to see responses from the remote Sequence Wallet
+4. Open browser inspector to see responses from your wallet
 
 ## Development
 
