@@ -137,12 +137,23 @@ And that has made all the difference.`
     const sig = await signer.signMessage(message)
     console.log('signature:', sig)
 
-    console.log('signed by', ethers.utils.verifyMessage(message, sig))
+    // For EOA:
+    // const digest = ethers.utils.arrayify(ethers.utils.hashMessage(message))
+
+    // For Smart Wallet:
+    // const digest = sequence.utils.encodeMessageDigest(message)
+
+    const isValid = await sequence.utils.isValidMessageSignature(
+      await signer.getAddress(),
+      message,
+      sig,
+      provider
+    )
+    console.log('isValid?', isValid)
+
   }
 
   const signTypedData = async () => {
-    console.log('signing typedData...')
-
     const signer = provider.getSigner()
 
     const typedData: sequence.utils.TypedData = {
@@ -166,20 +177,20 @@ And that has made all the difference.`
 
     const sig = await signer._signTypedData(typedData.domain, typedData.types, typedData.message)
     console.log('signature:', sig)
+
+    const isValid = await sequence.utils.isValidTypedDataSignature(
+      await signer.getAddress(),
+      typedData,
+      sig,
+      provider
+    )
+    console.log('isValid?', isValid)
   }
 
   const sendETH = async () => {
     const signer = provider.getSigner() // select DefaultChain signer by default
 
-    console.log(`Transfer txn on ${signer.getChainId()} chainId......`)
-
-    // NOTE: on mainnet, the balance will be of ETH value
-    // and on matic, the balance will be of MATIC value
-    // const balance = await signer.getBalance()
-    // if (balance.eq(ethers.constants.Zero)) {
-    //   const address = await signer.getAddress()
-    //   throw new Error(`wallet ${address} has 0 balance, so cannot transfer anything. Deposit and try again.`)
-    // }
+    console.log(`Transfer txn on ${signer.getChainId()}`)
 
     const toAddress = ethers.Wallet.createRandom().address
 
