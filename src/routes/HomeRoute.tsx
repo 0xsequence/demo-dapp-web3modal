@@ -137,12 +137,6 @@ And that has made all the difference.`
     const sig = await signer.signMessage(message)
     console.log('signature:', sig)
 
-    // For EOA:
-    // const digest = ethers.utils.arrayify(ethers.utils.hashMessage(message))
-
-    // For Smart Wallet:
-    // const digest = sequence.utils.encodeMessageDigest(message)
-
     const isValid = await sequence.utils.isValidMessageSignature(
       await signer.getAddress(),
       message,
