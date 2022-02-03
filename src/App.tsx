@@ -247,7 +247,7 @@ And that has made all the difference.`
         </Button>
       </Group>
 
-      <Group>
+      <Group label="Signing" layout="grid">
         <Button disabled={disableActions} onClick={() => signMessage()}>
           Sign Message
         </Button>
