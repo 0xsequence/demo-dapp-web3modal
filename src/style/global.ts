@@ -7,6 +7,7 @@ globalCss({
 
   body: {
     background: '$background',
-    margin: 0
+    margin: 0,
+    fontFamily: 'Arial'
   }
 })()
