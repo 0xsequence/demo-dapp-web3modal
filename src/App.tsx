@@ -47,7 +47,7 @@ const web3Modal = new Web3Modal({
   cacheProvider: true
 })
 
-const HomeRoute = () => {
+const App = () => {
   const [provider, setProvider] = useState<ethers.providers.Web3Provider | null>(null)
 
   useEffect(() => {
@@ -268,7 +268,7 @@ And that has made all the difference.`
   )
 }
 
-export default React.memo(HomeRoute)
+export default React.memo(App)
 
 const Container = styled('div', {
   padding: '80px 25px 80px',
