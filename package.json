@@ -22,6 +22,7 @@
   "dependencies": {
     "0xsequence": "^0.35.11",
     "@0xsequence/ethauth": "0.6.0",
+    "@0xsequence/web3modal": "2.0.0",
     "@walletconnect/web3-provider": "^1.7.1",
     "core-js": "^3.6.1",
     "emotion": "^10.0.27",
@@ -36,7 +37,6 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "theme-ui": "^0.3.1",
-    "web3modal": "^1.9.5",
     "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
