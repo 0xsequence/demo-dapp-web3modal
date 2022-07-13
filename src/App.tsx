@@ -270,21 +270,25 @@ And that has made all the difference.`
 
 export default React.memo(App)
 
+// @ts-ignore
 const Container = styled('div', {
   padding: '80px 25px 80px',
   margin: '0 auto',
   maxWidth: '720px'
 })
 
+// @ts-ignore
 const SequenceLogo = styled('img', {
   height: '40px'
 })
 
+// @ts-ignore
 const Title = styled('h1', typography.h1, {
   color: '$textPrimary',
   fontSize: '25px'
 })
 
+// @ts-ignore
 const Description = styled('p', typography.b1, {
   color: '$textSecondary',
   marginBottom: '15px'
