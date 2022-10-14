@@ -5,10 +5,7 @@ import logoUrl from './images/logo.svg'
 import { ethers } from 'ethers'
 import { sequence } from '0xsequence'
 
-// NOTE: here we use a forked package of web3modal, named @0xsequence/web3modal
-// Once the web3modal PR https://github.com/Web3Modal/web3modal/pull/402 is merged,
-// then you can just import from 'web3modal' directly without any other changes.
-import Web3Modal from '@0xsequence/web3modal'
+import Web3Modal from 'web3modal'
 
 import WalletConnect from '@walletconnect/web3-provider'
 
