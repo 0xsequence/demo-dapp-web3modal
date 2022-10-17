@@ -80,6 +80,9 @@ const App = () => {
 
   useEffect(() => {
     consoleWelcomeMessage()
+  }, [])
+
+  useEffect(() => {
     if (web3Modal.cachedProvider) {
       connectWallet()
     }
