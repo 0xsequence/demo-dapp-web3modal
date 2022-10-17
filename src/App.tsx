@@ -78,13 +78,12 @@ const App = () => {
     setConsoleMsg('An error occurred')
   }
 
-
   useEffect(() => {
     consoleWelcomeMessage()
     if (web3Modal.cachedProvider) {
       connectWallet()
     }
-  }, [])
+  })
 
   const connectWeb3Modal = async () => {
     if (web3Modal.cachedProvider) {
