@@ -83,14 +83,8 @@ const App = () => {
     if (web3Modal.cachedProvider) {
       connectWallet()
     }
-  })
-
-  const connectWeb3Modal = async () => {
-    if (web3Modal.cachedProvider) {
-      web3Modal.clearCachedProvider()
-    }
-    connectWallet()
-  }
+  // eslint-disable-next-line
+  }, [])
 
   const connectWallet = async () => {
     const wallet = await web3Modal.connect()
@@ -103,6 +97,13 @@ const App = () => {
 
     setProvider(provider)
     addNewConsoleLine('Wallet connected!')
+  }
+
+  const connectWeb3Modal = async () => {
+    if (web3Modal.cachedProvider) {
+      web3Modal.clearCachedProvider()
+    }
+    connectWallet()
   }
 
   const disconnectWeb3Modal = async () => {
