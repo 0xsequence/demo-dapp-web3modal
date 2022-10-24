@@ -82,12 +82,14 @@ const App = () => {
     consoleWelcomeMessage()
   }, [])
 
-  useEffect(() => {
-    if (web3Modal.cachedProvider) {
-      connectWallet()
-    }
-  // eslint-disable-next-line
-  }, [])
+  // Uncomment to enable automatically connecting to the cached Provider
+  // Might cause a popup to appear on start in some cases
+  // useEffect(() => {
+  //   if (web3Modal.cachedProvider) {
+  //     connectWallet()
+  //   }
+  // // eslint-disable-next-line
+  // }, [])
 
   const connectWallet = async () => {
     const wallet = await web3Modal.connect()

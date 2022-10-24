@@ -62,7 +62,7 @@
     "@0xsequence/utils" "^0.42.8"
     ethers "^5.5.2"
 
-"@0xsequence/ethauth@0.7.0", "@0xsequence/ethauth@^0.7.0":
+"@0xsequence/ethauth@^0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@0xsequence/ethauth/-/ethauth-0.7.0.tgz#267f164404e1cafbfca534e0683cc4798ba4e8db"
   integrity sha512-pghfR+OLm82wLMR9Uvvf53f0LniZLhcqw0G4EthFw1ME71/CWUskhR2MIeYKh1t7+OE3TqCbOBJ/p/buv8XynQ==
