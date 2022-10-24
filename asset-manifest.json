@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/demo-dapp-web3modal/static/js/main.276a989a.js",
+    "main.js": "/demo-dapp-web3modal/static/js/main.014d396f.js",
     "static/js/787.269f431c.chunk.js": "/demo-dapp-web3modal/static/js/787.269f431c.chunk.js",
     "static/media/logo.svg": "/demo-dapp-web3modal/static/media/logo.d7c9fc677fe69678a0a3dea6090ba6e9.svg",
     "index.html": "/demo-dapp-web3modal/index.html",
-    "main.276a989a.js.map": "/demo-dapp-web3modal/static/js/main.276a989a.js.map",
+    "main.014d396f.js.map": "/demo-dapp-web3modal/static/js/main.014d396f.js.map",
     "787.269f431c.chunk.js.map": "/demo-dapp-web3modal/static/js/787.269f431c.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.276a989a.js"
+    "static/js/main.014d396f.js"
   ]
 }
