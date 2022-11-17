@@ -5,8 +5,7 @@ import logoUrl from './images/logo.svg'
 import { ethers } from 'ethers'
 import { sequence } from '0xsequence'
 
-import Web3Modal from 'web3modal'
-
+import Web3Modal from '@0xsequence/web3modal'
 import WalletConnect from '@walletconnect/web3-provider'
 
 import { ERC_20_ABI } from './constants/abi'
@@ -51,45 +50,18 @@ const App = () => {
   const [consoleMsg, setConsoleMsg] = useState<null|string>(null)
   const [consoleLoading, setConsoleLoading] = useState<boolean>(false)
 
-  const appendConsoleLine = (message: string) => {
-    return (setConsoleMsg((prevState => {
-      return `${prevState}\n\n${message}`
-    })))
-  }
-  
-  const resetConsole = () => {
-    setConsoleMsg(null)
-    setConsoleLoading(true)
-  }
-
-  const addNewConsoleLine = (message: string) => {
-    setConsoleMsg((() => {
-      return (message)
-    }))
-  }
-
-  const consoleWelcomeMessage = () => {
-    setConsoleLoading(false)
-    setConsoleMsg('Status: Wallet not connected. Please connect wallet to use Methods')
-  }
-
-  const consoleErrorMesssage = () => {
-    setConsoleLoading(false)
-    setConsoleMsg('An error occurred')
-  }
-
   useEffect(() => {
     consoleWelcomeMessage()
   }, [])
 
   // Uncomment to enable automatically connecting to the cached Provider
   // Might cause a popup to appear on start in some cases
-  // useEffect(() => {
-  //   if (web3Modal.cachedProvider) {
-  //     connectWallet()
-  //   }
-  // // eslint-disable-next-line
-  // }, [])
+  useEffect(() => {
+    if (web3Modal.cachedProvider) {
+      connectWallet()
+    }
+  // eslint-disable-next-line
+  }, [])
 
   const connectWallet = async () => {
     const wallet = await web3Modal.connect()
@@ -339,6 +311,32 @@ const App = () => {
   }
 
   const disableActions = !provider
+  const appendConsoleLine = (message: string) => {
+    return (setConsoleMsg((prevState => {
+      return `${prevState}\n\n${message}`
+    })))
+  }
+  
+  const resetConsole = () => {
+    setConsoleMsg(null)
+    setConsoleLoading(true)
+  }
+
+  const addNewConsoleLine = (message: string) => {
+    setConsoleMsg((() => {
+      return (message)
+    }))
+  }
+
+  const consoleWelcomeMessage = () => {
+    setConsoleLoading(false)
+    setConsoleMsg('Status: Wallet not connected. Please connect wallet to use Methods')
+  }
+
+  const consoleErrorMesssage = () => {
+    setConsoleLoading(false)
+    setConsoleMsg('An error occurred')
+  }
 
   return (
     <Container>
