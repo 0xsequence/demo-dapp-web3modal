@@ -5,7 +5,7 @@ import logoUrl from './images/logo.svg'
 import { ethers } from 'ethers'
 import { sequence } from '0xsequence'
 
-import Web3Modal from '@0xsequence/web3modal'
+import Web3Modal, { connectors } from '@0xsequence/web3modal'
 import WalletConnect from '@walletconnect/web3-provider'
 
 import { ERC_20_ABI } from './constants/abi'
@@ -27,6 +27,9 @@ let providerOptions: any = {
   }
 }
 
+let sequenceWallet: sequence.Wallet | undefined
+let sequenceConnectDetails: sequence.provider.ConnectDetails | undefined
+
 if (!window?.ethereum?.isSequence) {
   providerOptions = {
     ...providerOptions,
@@ -34,7 +37,24 @@ if (!window?.ethereum?.isSequence) {
       package: sequence,
       options: {
         appName: 'Web3Modal Demo Dapp',
-        defaultNetwork: 'polygon'
+        defaultNetwork: 'polygon',
+
+        // onConnect is an optional callback which will be triggered whenever
+        // web3modal connects the Sequence wallet. In connectDetails you will find
+        // the useful `connectDetails.proof` which gives you a signed message upon connect.
+        onConnect: (connectDetails: sequence.provider.ConnectDetails) => {
+          console.log('got the connect details here..', connectDetails)
+          sequenceConnectDetails = connectDetails
+        },
+
+        // getSequenceWallet is an optional callback which will be triggered whenever
+        // web3modal initializes a Sequence wallet. This will happen each time on
+        // a browser reload. It's useful in case when you want to make Sequence-specific
+        // calls, such as a batched transaction.
+        getSequenceWallet: (wallet: sequence.Wallet) => {
+          console.log('got the wallet here..', sequenceWallet)
+          sequenceWallet = wallet
+        }
       }
     }
   }
@@ -68,8 +88,8 @@ const App = () => {
 
     const provider = new ethers.providers.Web3Provider(wallet)
 
-    if (wallet.sequence) {
-      ;(provider as any).sequence = wallet.sequence
+    if (sequenceConnectDetails) {
+      console.log('Sequence wallet has been connected. connectDetails:', sequenceConnectDetails)
     }
 
     setProvider(provider)
@@ -86,10 +106,8 @@ const App = () => {
   const disconnectWeb3Modal = async () => {
     web3Modal.clearCachedProvider()
 
-    if (provider && (provider as any).sequence) {
-      const wallet = (provider as any).sequence as sequence.Wallet
-      wallet.disconnect()
-    }
+    // disconnect the sequence wallet if previously had been initialized
+    sequenceWallet?.disconnect()
 
     setProvider(null)
     consoleWelcomeMessage()
