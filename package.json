@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "0xsequence": "^0.43.1",
-    "@0xsequence/web3modal": "^2.0.2",
+    "@0xsequence/web3modal": "^2.0.4",
     "@radix-ui/colors": "^0.1.8",
     "@stitches/react": "^1.2.6",
     "@testing-library/jest-dom": "^5.16.2",

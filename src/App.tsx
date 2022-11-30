@@ -5,7 +5,7 @@ import logoUrl from './images/logo.svg'
 import { ethers } from 'ethers'
 import { sequence } from '0xsequence'
 
-import Web3Modal, { connectors } from '@0xsequence/web3modal'
+import Web3Modal from '@0xsequence/web3modal'
 import WalletConnect from '@walletconnect/web3-provider'
 
 import { ERC_20_ABI } from './constants/abi'
@@ -54,7 +54,16 @@ if (!window?.ethereum?.isSequence) {
         getSequenceWallet: (wallet: sequence.Wallet) => {
           console.log('got the wallet here..', sequenceWallet)
           sequenceWallet = wallet
-        }
+        },
+
+        // keepWalletOpened is an optional flag which will keep the Sequence wallet
+        // opened after a connection. You will be responsible to close the wallet
+        // window on your own with `sequenceWallet.close()` call. This is useful
+        // at times if you want to send a bunch of operations to the wallet
+        // without having to open and close it. In more cases, you won't need this,
+        // but it is here for flexibility.
+        //
+        // keepWalletOpened: true,
       }
     }
   }

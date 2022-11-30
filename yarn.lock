@@ -149,10 +149,10 @@
     "@0xsequence/transactions" "^0.43.1"
     "@0xsequence/utils" "^0.43.1"
 
-"@0xsequence/web3modal@^2.0.3":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@0xsequence/web3modal/-/web3modal-2.0.3.tgz#6958a12c9fdd6ab14bd70b771d09e2c232331bb7"
-  integrity sha512-mjwapAu4zbu5tAh1f5/5l/9pvbX+rxXknA2r817Yv9Iq/HVUpIS3E9Rx9N+YbNImSnagqoDWYU3spD6baDSaQw==
+"@0xsequence/web3modal@^2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@0xsequence/web3modal/-/web3modal-2.0.4.tgz#b0f785592d6682184a63e07b927b2bd5f3569853"
+  integrity sha512-fLqaHYZ73Z3Xmcc4QvNOO2q1l+fesoPPNPT4ylQwJDipGX0Vu1ja0EMSStUz5bJVsYAp/h+QAhaIQy1JLNQHuA==
   dependencies:
     detect-browser "^5.1.0"
     prop-types "^15.7.2"
