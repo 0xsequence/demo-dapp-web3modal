@@ -6,7 +6,7 @@
   "homepage": "demo-dapp-web3modal",
   "scripts": {
     "dev": "BROWSER=none yarn start",
-    "start": "PORT=4000 GENERATE_SOURCEMAP=false craci start",
+    "start": "PORT=4000 GENERATE_SOURCEMAP=false craco start",
     "build": "BUILD_PATH='./dist' craco build",
     "eject": "react-scripts eject",
     "dist": "yarn build",
