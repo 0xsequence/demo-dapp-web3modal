@@ -371,7 +371,7 @@ const App = () => {
         <Image height="10" alt="logo" src={logoUrl} />
       </Box>
       <Box>
-        <Text color="text100" variant="large">Demo Dapp + Wagmi</Text>
+        <Text color="text100" variant="large">Demo Dapp + Web3Modal</Text>
       </Box>
       <Box marginBottom="4">
         <Text>Please open your browser dev inspector to view output of functions below</Text>
