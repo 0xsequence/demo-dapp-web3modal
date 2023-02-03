@@ -1,6 +1,11 @@
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
+const { VanillaExtractPlugin } = require('@vanilla-extract/webpack-plugin');
+
+
 
 module.exports = function override(config, env) {
+  config.plugins.push(new VanillaExtractPlugin())
+
   config.plugins.push(
     new NodePolyfillPlugin({
       excludeAliases: [

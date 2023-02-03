@@ -1,3 +1,4 @@
+import { Box, Image, Text } from '@0xsequence/design-system'
 import React, { useState, useEffect } from 'react'
 
 import logoUrl from './images/logo.svg'
@@ -12,7 +13,6 @@ import { ERC_20_ABI } from './constants/abi'
 
 import { configureLogger } from '@0xsequence/utils'
 import { Group } from './components/Group'
-import { styled, typography } from './style'
 import { Button } from './components/Button'
 import { Console } from './components/Console'
 
@@ -366,16 +366,21 @@ const App = () => {
   }
 
   return (
-    <Container>
-      <SequenceLogo alt="logo" src={logoUrl} />
-      <Title>Demo Dapp + Web3Modal</Title>
-      <Description>Please open your browser dev inspector to view output of functions below</Description>
-
-      <Group label="Connection" layout="grid">
+    <Box marginY="0" marginX="auto" paddingX="6" style={{ maxWidth: '720px', marginTop: '80px', marginBottom: '80px' }}>
+      <Box marginBottom="4">
+        <Image height="10" alt="logo" src={logoUrl} />
+      </Box>
+      <Box>
+        <Text color="text100" variant="large">Demo Dapp + Wagmi</Text>
+      </Box>
+      <Box marginBottom="4">
+        <Text>Please open your browser dev inspector to view output of functions below</Text>
+      </Box>
+      <Group label="Connection">
         <Button onClick={() => connectWeb3Modal()}>Connect Web3Modal</Button>
         <Button onClick={() => disconnectWeb3Modal()}>Disconnect</Button>
       </Group>
-      <Group label="State" layout="grid">
+      <Group label="State">
         <Button disabled={disableActions} onClick={() => getChainID()}>
           ChainID
         </Button>
@@ -390,7 +395,7 @@ const App = () => {
         </Button>
       </Group>
 
-      <Group label="Signing" layout="grid">
+      <Group label="Signing">
         <Button disabled={disableActions} onClick={() => signMessage()}>
           Sign Message
         </Button>
@@ -399,7 +404,7 @@ const App = () => {
         </Button>
       </Group>
 
-      <Group label="Transactions" layout="grid">
+      <Group label="Transactions">
         <Button disabled={disableActions} onClick={() => sendETH()}>
           Send ETH
         </Button>
@@ -409,32 +414,8 @@ const App = () => {
       </Group>
 
       <Console message={consoleMsg} loading={consoleLoading} />
-    </Container>
+    </Box>
   )
 }
 
 export default React.memo(App)
-
-// @ts-ignore
-const Container = styled('div', {
-  padding: '80px 25px 80px',
-  margin: '0 auto',
-  maxWidth: '720px'
-})
-
-// @ts-ignore
-const SequenceLogo = styled('img', {
-  height: '40px'
-})
-
-// @ts-ignore
-const Title = styled('h1', typography.h1, {
-  color: '$textPrimary',
-  fontSize: '25px'
-})
-
-// @ts-ignore
-const Description = styled('p', typography.b1, {
-  color: '$textSecondary',
-  marginBottom: '15px'
-})
