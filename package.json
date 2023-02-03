@@ -6,8 +6,8 @@
   "homepage": "demo-dapp-web3modal",
   "scripts": {
     "dev": "BROWSER=none yarn start",
-    "start": "PORT=4000 GENERATE_SOURCEMAP=false react-app-rewired start",
-    "build": "BUILD_PATH='./dist' react-app-rewired build",
+    "start": "PORT=4000 GENERATE_SOURCEMAP=false craci start",
+    "build": "BUILD_PATH='./dist' craco build",
     "eject": "react-scripts eject",
     "dist": "yarn build",
     "link-sequence": "yarn link 0xsequence @0xsequence/abi @0xsequence/api @0xsequence/auth @0xsequence/config @0xsequence/guard @0xsequence/multicall @0xsequence/network @0xsequence/provider @0xsequence/relayer @0xsequence/transactions @0xsequence/utils @0xsequence/wallet",
@@ -30,7 +30,6 @@
     "framer-motion": "^9.0.1",
     "node-polyfill-webpack-plugin": "^1.1.4",
     "react": "^18.0.0",
-    "react-app-rewired": "^2.1.11",
     "react-dom": "^18.0.0",
     "react-scripts": "5.0.0",
     "typescript": "^4.5.5",
@@ -55,6 +54,7 @@
     ]
   },
   "devDependencies": {
+    "@craco/craco": "^7.0.0",
     "@vanilla-extract/webpack-plugin": "^2.2.0"
   }
 }
