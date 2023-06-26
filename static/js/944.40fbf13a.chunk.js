@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkdemo_dapp_web3modal=self.webpackChunkdemo_dapp_web3modal||[]).push([[944],{7944:function(e,o,d){d.r(o);var t=null;"undefined"!==typeof WebSocket?t=WebSocket:"undefined"!==typeof MozWebSocket?t=MozWebSocket:"undefined"!==typeof d.g?t=d.g.WebSocket||d.g.MozWebSocket:"undefined"!==typeof window?t=window.WebSocket||window.MozWebSocket:"undefined"!==typeof self&&(t=self.WebSocket||self.MozWebSocket),o.default=t}}]);
+//# sourceMappingURL=944.40fbf13a.chunk.js.map

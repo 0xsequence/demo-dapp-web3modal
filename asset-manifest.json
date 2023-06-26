@@ -1,16 +1,37 @@
 {
   "files": {
     "main.css": "/demo-dapp-web3modal/static/css/main.cf80af7e.css",
-    "main.js": "/demo-dapp-web3modal/static/js/main.d12aaefd.js",
+    "main.js": "/demo-dapp-web3modal/static/js/main.56d9b431.js",
+    "static/js/955.24a65593.chunk.js": "/demo-dapp-web3modal/static/js/955.24a65593.chunk.js",
+    "static/js/21.e52641a2.chunk.js": "/demo-dapp-web3modal/static/js/21.e52641a2.chunk.js",
+    "static/js/944.40fbf13a.chunk.js": "/demo-dapp-web3modal/static/js/944.40fbf13a.chunk.js",
+    "static/js/624.a70859cf.chunk.js": "/demo-dapp-web3modal/static/js/624.a70859cf.chunk.js",
+    "static/js/883.97cc5c14.chunk.js": "/demo-dapp-web3modal/static/js/883.97cc5c14.chunk.js",
     "static/js/107.8fff4014.chunk.js": "/demo-dapp-web3modal/static/js/107.8fff4014.chunk.js",
+    "static/js/495.38c898b1.chunk.js": "/demo-dapp-web3modal/static/js/495.38c898b1.chunk.js",
+    "static/js/143.8503d427.chunk.js": "/demo-dapp-web3modal/static/js/143.8503d427.chunk.js",
+    "static/js/789.d5e0fbc6.chunk.js": "/demo-dapp-web3modal/static/js/789.d5e0fbc6.chunk.js",
+    "static/js/169.b4fab9b7.chunk.js": "/demo-dapp-web3modal/static/js/169.b4fab9b7.chunk.js",
+    "static/js/41.028f94c1.chunk.js": "/demo-dapp-web3modal/static/js/41.028f94c1.chunk.js",
+    "static/js/381.c78688de.chunk.js": "/demo-dapp-web3modal/static/js/381.c78688de.chunk.js",
     "static/media/logo.svg": "/demo-dapp-web3modal/static/media/logo.d7c9fc677fe69678a0a3dea6090ba6e9.svg",
     "index.html": "/demo-dapp-web3modal/index.html",
     "main.cf80af7e.css.map": "/demo-dapp-web3modal/static/css/main.cf80af7e.css.map",
-    "main.d12aaefd.js.map": "/demo-dapp-web3modal/static/js/main.d12aaefd.js.map",
-    "107.8fff4014.chunk.js.map": "/demo-dapp-web3modal/static/js/107.8fff4014.chunk.js.map"
+    "main.56d9b431.js.map": "/demo-dapp-web3modal/static/js/main.56d9b431.js.map",
+    "955.24a65593.chunk.js.map": "/demo-dapp-web3modal/static/js/955.24a65593.chunk.js.map",
+    "21.e52641a2.chunk.js.map": "/demo-dapp-web3modal/static/js/21.e52641a2.chunk.js.map",
+    "944.40fbf13a.chunk.js.map": "/demo-dapp-web3modal/static/js/944.40fbf13a.chunk.js.map",
+    "624.a70859cf.chunk.js.map": "/demo-dapp-web3modal/static/js/624.a70859cf.chunk.js.map",
+    "107.8fff4014.chunk.js.map": "/demo-dapp-web3modal/static/js/107.8fff4014.chunk.js.map",
+    "495.38c898b1.chunk.js.map": "/demo-dapp-web3modal/static/js/495.38c898b1.chunk.js.map",
+    "143.8503d427.chunk.js.map": "/demo-dapp-web3modal/static/js/143.8503d427.chunk.js.map",
+    "789.d5e0fbc6.chunk.js.map": "/demo-dapp-web3modal/static/js/789.d5e0fbc6.chunk.js.map",
+    "169.b4fab9b7.chunk.js.map": "/demo-dapp-web3modal/static/js/169.b4fab9b7.chunk.js.map",
+    "41.028f94c1.chunk.js.map": "/demo-dapp-web3modal/static/js/41.028f94c1.chunk.js.map",
+    "381.c78688de.chunk.js.map": "/demo-dapp-web3modal/static/js/381.c78688de.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cf80af7e.css",
-    "static/js/main.d12aaefd.js"
+    "static/js/main.56d9b431.js"
   ]
 }
