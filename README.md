@@ -28,7 +28,7 @@ which is compatible with 1193 providers.
 
 ## Screenshots
 
-**Connect Wallet with Web3Modal with Sequence + WalletConnect options:**
+**Connect Wallet with Web3Modal with Sequence + Metamask + WalletConnect options:**
 
 ![Connect Wallet](./screenshots/screen-open.png)
 

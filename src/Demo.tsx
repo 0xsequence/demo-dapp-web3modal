@@ -316,7 +316,7 @@ const App = () => {
         <Image height="10" alt="logo" src={logoUrl} />
       </Box>
       <Box>
-        <Text color="text100" variant="large">Demo Dapp + Web3modal</Text>
+        <Text color="text100" variant="large">Demo Dapp + Wagmi</Text>
       </Box>
       {getConnectionButtons()}
       {getWalletActions()}
