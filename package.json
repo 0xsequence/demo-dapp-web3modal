@@ -16,7 +16,6 @@
   "dependencies": {
     "0xsequence": "^0.43.1",
     "@0xsequence/design-system": "^0.1.107",
-    "@0xsequence/web3modal": "^2.0.4",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
